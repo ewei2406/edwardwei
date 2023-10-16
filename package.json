@@ -1,0 +1,14 @@
+{
+  "name": "edwardwei",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd app && npm ci && npm run build",
+    "deploy": "aws s3 sync app/dist s3://edwardweicom",
+    "purge-cache": "aws cloudfront create-invalidation --distribution-id E28XLY3F9K2DU5 --paths \"/*\""
+  },
+  "author": "",
+  "license": "ISC"
+}
