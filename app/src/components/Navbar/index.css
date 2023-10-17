@@ -1,0 +1,24 @@
+#dotsIcon {
+    fill: var(--dark3);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#dotsIcon:hover {
+    background-color: var(--dark1);
+}
+
+.navlink {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: var(--dark4);
+}
+
+.navlink:hover {
+    text-decoration: underline;
+}

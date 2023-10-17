@@ -1,35 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Search from './components/Search'
+import Logo from './components/Logo'
+import Button from './components/Button'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import { createContext, useEffect, useState } from 'react'
 
-function App() {
-  const [count, setCount] = useState(0)
+export const MobileContext = createContext(false)
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+const debounce = (func: Function, ms: number) => {
+    let timer: number | undefined
+    return () => {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+            timer = undefined
+            func.apply(this)
+        }, ms)
+    };
+}
+
+const App = () => {
+    const [mobile, setMobile] = useState(false)
+
+    useEffect(() => {
+        if (window.innerWidth < 1000) setMobile(true)
+        else setMobile(false)
+    }, [])
+
+    return (
+        <MobileContext.Provider value={mobile}>
+            <div style={{ height: '100%' }}>
+                <Navbar/>
+                <div style={{
+                    height: 'calc(100% - 655px)',
+                    maxHeight: '215px',
+                }}>
+                </div>
+                <div style={{
+                    display: 'flex',
+                    marginTop: 60,
+                    padding: '0 32px',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    flexGrow: 0,
+                    gap: 45
+                }}>
+                    <Logo />
+                    <Search />
+                    <Button text="I'm Feeling Lucky" onClick={() => {}}/>
+                </div>
+                <Footer/>
+            </div>
+        </MobileContext.Provider>
+    )
 }
 
 export default App

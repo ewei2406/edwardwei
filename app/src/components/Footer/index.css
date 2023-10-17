@@ -1,0 +1,10 @@
+.footerlink {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: var(--dark3);
+}
+
+.footerlink:hover {
+    text-decoration: underline;
+}
