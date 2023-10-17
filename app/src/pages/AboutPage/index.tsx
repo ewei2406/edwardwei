@@ -6,7 +6,7 @@ import Text from "../../components/Text"
 const AboutPage = () => {
     return(
         <>
-            <Navbar logo/>
+            <Navbar/>
             <div style={{
                 height: 'calc(100% - 655px)',
                 maxHeight: '100px',

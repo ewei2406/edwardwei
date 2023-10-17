@@ -1,11 +1,10 @@
-import Logo from '../Logo'
 import './index.css'
 
 const Navlink = ({ text, href }: { text: string, href: string }) => <a href={href} className="navlink">
     {text}
 </a>
 
-const Navbar = ({ logo }: { logo?: boolean }) => {
+const Navbar = () => {
     return <>
         <div style={{
             position: 'absolute',
