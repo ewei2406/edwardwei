@@ -1,10 +1,11 @@
 import edwardwei from '../../assets/edwardwei.png'
 
-const Logo = () => <div>
+const Logo = ({ size }: { size?: number }) => <a href='/'>
     <img style={{
-        maxHeight: '65px',
+        maxHeight: size || 65,
+        margin: '0 auto',
         width: '100%'
     }} src={edwardwei} alt="" />
-</div>
+</a>
 
 export default Logo

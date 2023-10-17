@@ -9,6 +9,7 @@
     line-height: 27px;
     height: 36px;
     cursor: pointer;
+    border: 1px solid transparent;
 }
 
 .button:hover {

@@ -6,16 +6,26 @@
     --dark3: #70757a;
     --dark4: #3c4043;
     --dark5: #202124;
-    --blue: #1a73e8;
+    --blue: #497AF1;
+    --yellow: #F1B61D;
+    --green: #489B49;
+    --red: #D74833;
 }
 
 html {
     font-family: 'Roboto', sans-serif;
 }
 
-body, #root {
+body,
+#root {
     box-sizing: border-box;
     height: 100vh;
     margin: 0;
     padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Gabarito', sans-serif;
 }
