@@ -1,9 +1,5 @@
 import './index.css'
 
-const Footerlink = ({ text, href }: { text: string, href: string }) => <a href={href} className="footerlink">
-    {text}
-</a>
-
 const Footer = () => <div style={{
     position: 'absolute',
     bottom: 0,

@@ -1,4 +1,3 @@
-import { useContext } from "react"
 import AuthIcon from "../AuthIcon"
 import './index.css'
 

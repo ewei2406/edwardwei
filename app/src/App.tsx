@@ -8,17 +8,6 @@ import { createContext, useEffect, useState } from 'react'
 
 export const MobileContext = createContext(false)
 
-const debounce = (func: Function, ms: number) => {
-    let timer: number | undefined
-    return () => {
-        clearTimeout(timer)
-        timer = setTimeout(() => {
-            timer = undefined
-            func.apply(this)
-        }, ms)
-    };
-}
-
 const App = () => {
     const [mobile, setMobile] = useState(false)
 
